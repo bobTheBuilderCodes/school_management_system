@@ -1,4 +1,4 @@
-import { TextField } from "@material-ui/core";
+// import { TextField } from "@material-ui/core";
 import { Button, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,10 +31,10 @@ const AccountSettings = () => {
   }, [lists]);
   return (
     <div style={style}>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <input value={searched} onChange={(e) => setSearched(e.target.value)} />
         <Button type="submit">Click </Button>
-      </form>
+      </form> */}
       {lists.map((list) => (
         <h1>{list}</h1>
       ))}
