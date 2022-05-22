@@ -1,0 +1,52 @@
+.schoolActivities_container {
+  /* background-color: #f1f1f1; */
+  border-radius: 8px;
+  padding: 10px;
+  height: 80vh;
+  position: relative;
+  margin: 10px;
+}
+
+.addActivity {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.schoolCalender {
+  padding: 10px;
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+
+  border-left: 5px solid #1976d2;
+
+  cursor: default;
+}
+
+.closeIcon {
+  margin-left: 2;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.closeIcon:hover {
+  opacity: 0.9;
+  color: #1976d2;
+}
+
+.activity:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 1366px) {
+  .addActivity {
+    width: 420px;
+  }
+}

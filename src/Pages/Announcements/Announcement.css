@@ -1,0 +1,12 @@
+.announcement_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: "60vw";
+  margin: -5px 1px 30px 65px;
+}
+
+.announcement {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+}

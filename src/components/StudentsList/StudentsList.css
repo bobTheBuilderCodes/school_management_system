@@ -1,0 +1,42 @@
+.studentsList_container {
+  min-height: 630px;
+  padding: 15px;
+}
+
+.searchAndAddStudent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.studentContainer {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+  padding: 10px;
+  /* flex-direction: column; */
+  color: #555;
+  cursor: pointer;
+  text-align: start;
+  transition: 0.5s all ease-in-out;
+}
+
+.studentNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+  /* justify-content: center; */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  gap: 10px;
+}
+
+.icons {
+  color: #555;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+  cursor: pointer;
+}

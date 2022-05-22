@@ -1,0 +1,14 @@
+.studentDetails_container {
+  display: flex;
+  margin-top: 10px;
+  min-height: 30vw;
+  /* width: 95vw; */
+  padding: 15px;
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.edit_profile {
+  display: flex;
+  justify-content: end;
+}

@@ -1,0 +1,8 @@
+.academicCalender_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  width: "60vw";
+  padding: 10px;
+  margin: -35px 1px 30px 65px;
+}

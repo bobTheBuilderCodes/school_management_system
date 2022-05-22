@@ -1,0 +1,23 @@
+.searchAndAddStaff {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+select {
+    padding: 10px;
+    border-radius: 8px;
+    width: 320px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+
+}
+
+@media screen and (max-width: 500px) {
+    select {
+        width: 120px;
+    }
+}

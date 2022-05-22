@@ -1,0 +1,32 @@
+.draftAnnouncementContainer {
+  width: 30vw;
+  height: auto;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #333;
+}
+
+.card_footer {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  /* align-items: baseline; */
+}
+
+@media screen and (max-width: 499px) {
+  .draftAnnouncementContainer {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 499px) and (max-width: 1025px) {
+  .draftAnnouncementContainer {
+    width: 43vw;
+    /* font-size: 40px; */
+    /* margin: 10px; */
+  }
+}

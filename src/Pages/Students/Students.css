@@ -1,0 +1,12 @@
+.students_container {
+  padding: 10px;
+  margin: -40px auto;
+  width: "60vw";
+  margin: -40px 10px 10px 65px;
+}
+
+.searchAndAddStudent {
+  display: grid;
+  justify-content: space-around;
+  flex-direction: column;
+}

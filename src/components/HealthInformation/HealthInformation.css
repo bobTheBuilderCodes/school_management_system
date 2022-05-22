@@ -1,0 +1,9 @@
+.information {
+  display: flex;
+
+  align-items: baseline;
+}
+
+input {
+  cursor: pointer;
+}

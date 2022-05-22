@@ -1,0 +1,8 @@
+.dashboard_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: "60vw";
+  margin: -35px 1px 30px 65px;
+}

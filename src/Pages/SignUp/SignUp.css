@@ -1,0 +1,16 @@
+.signUp_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20vh auto;
+  width: 380px;
+  height: 400px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 499px) {
+  .signUp_container {
+    width: 90vw;
+  }
+}

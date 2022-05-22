@@ -1,0 +1,13 @@
+.staffContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* flex-direction: column; */
+  color: #555;
+  transition: 0.5s all ease-in-out;
+}
+
+.staffContainer:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
