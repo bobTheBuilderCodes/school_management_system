@@ -1,9 +1,56 @@
-.information {
-  display: flex;
-
-  align-items: baseline;
+.health_information {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
-input {
-  cursor: pointer;
+.paper {
+  min-height: 200px;
+  width: 30vw;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-left: 10px;
+}
+
+.icon_container {
+  display: grid;
+  place-items: center;
+  gap: 15px;
+  color: aliceblue;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #24277f;
+}
+
+.allergies_container {
+  display: inline;
+  min-width: 80%;
+  min-height: 90%;
+  padding-left: -30px;
+}
+
+.allergyList {
+  margin-left: 10px;
+}
+
+.allergy {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #f1f1f1;
+  width: fit-content;
+  margin-right: 10px;
+}
+
+.allergy_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
+
+  margin: 10px;
+  padding: 10px;
 }
