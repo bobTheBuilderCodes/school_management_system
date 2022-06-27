@@ -35,7 +35,8 @@ const HealthInformation = () => {
   };
 
   const handleAllergyDeletion = (key) => {
-    allergyLists.filter((allergy) => allergy !== allergy.key);
+    // allergyLists.filter((allergy) => allergy !== allergy.key);
+    localStorage.removeItem("allergies");
   };
 
   const iconStyle = {
@@ -98,15 +99,15 @@ const HealthInformation = () => {
             )}
           </form>
           <div className="allergy_wrapper">
-            {allergyLists.map((allergyList, key) => (
+            {allergyLists.map((allergyList, index) => (
               <div
                 style={{
                   width: "fit-content",
                   marginBottom: "10px",
                 }}
+                key={index}
               >
                 <Typography
-                  key={key}
                   className="allergy"
                   component={"span"}
                   style={{
@@ -119,7 +120,7 @@ const HealthInformation = () => {
                     style={{
                       display: "grid",
                       placeItems: "center",
-                      backgroundColor: "#c6c6c6",
+                      backgroundColor: "#eeeeee",
                       borderRadius: "50%",
                       marginLeft: "20px",
                       cursor: "pointer",

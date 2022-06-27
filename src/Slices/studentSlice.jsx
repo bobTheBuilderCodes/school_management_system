@@ -5,7 +5,7 @@ const studentsReducer = createSlice({
   initialState: {
     students: [
       {
-        studentNumber: 1,
+        studentNumber: 0,
         studentName: "John Doe",
         studentGender: "Male",
         studentDateOfBirth: "12-03-98",
@@ -14,6 +14,16 @@ const studentsReducer = createSlice({
         parentName: "Frank Aboagye",
         studentLevel: "Class Four",
       },
+      // {
+      //   studentNumber: 1,
+      //   studentName: "John Doe",
+      //   studentGender: "Male",
+      //   studentDateOfBirth: "12-03-98",
+      //   guardianMobileNumber: "0200 034 3222",
+      //   studentTown: "Tutuka",
+      //   parentName: "Frank Aboagye",
+      //   studentLevel: "Class Four",
+      // },
     ],
   },
   reducers: {

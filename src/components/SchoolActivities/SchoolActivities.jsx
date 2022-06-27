@@ -9,8 +9,6 @@ const SchoolActivities = () => {
 
   const [schoolActivities, setSchoolActivities] = useState([]);
 
-  console.log(4 + 3);
-
   console.log(schoolActivities);
 
   const submitHandler = (e) => {

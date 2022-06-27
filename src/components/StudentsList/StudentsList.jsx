@@ -39,20 +39,30 @@ const StudentsList = () => {
   const navigate = useNavigate();
   const { username } = useParams();
 
-  const students = useSelector((state) => state.students.students);
-  console.log(students);
   // Modal
   const dispatch = useDispatch();
 
+  const students = useSelector((state) => state.students.students);
+
   const [studentNumber, setStudentNumber] = useState(1);
-  const [studentName, setStudentName] = useState("");
-  const [studentGender, setStudentGender] = useState("");
+  const [studentName, setStudentName] = useState(students.studentName);
+  const [studentGender, setStudentGender] = useState("Male");
   const [studentLevel, setStudentLevel] = useState("");
   const [studentDateOfBirth, setStudentDateOfBirth] = useState("");
-  const [studentTown, setStudentTown] = useState("");
-  const [guardianMobileNumber, setGuardianMobileNumber] = useState("");
-  const [parentName, setParentName] = useState("");
+  const [studentTown, setStudentTown] = useState("Tutuka");
+  const [guardianMobileNumber, setGuardianMobileNumber] =
+    useState("0243546544");
+  const [parentName, setParentName] = useState("Kojo Nkansah");
+  const [allStudent, setAllStudent] = useState(
+    JSON.parse(window.localStorage.getItem("students"))
+      ? [JSON.parse(window.localStorage.getItem("students"))]
+      : []
+  );
 
+  console.log("allStudent", allStudent);
+  console.log("allStudent", typeof allStudent);
+  console.log("students", students);
+  console.log("students", typeof students);
   // Search student by name
   let [searchedStudent, setSearchedStudent] = useState("");
 
@@ -80,14 +90,20 @@ const StudentsList = () => {
 
   // Get students data from browswer
 
-  // useEffect(() => {
-  //   return JSON.parse(window.localStorage.getItem("students"));
-  // }, []);
+  useEffect(() => {
+    return () => {
+      const data = allStudent;
+      setAllStudent(data);
+    };
+  }, []);
 
   // Store students data in browser
-  // useEffect(() => {
-  //   window.localStorage.setItem("students", JSON.stringify(students));
-  // }, [students]);
+  useEffect(() => {
+    window.localStorage.setItem(
+      "students",
+      JSON.stringify({ ...students, studentName })
+    );
+  }, [students]);
 
   const handleAddStudent = (e) => {
     e.preventDefault();
@@ -377,7 +393,7 @@ const StudentsList = () => {
         {students.length ? (
           students
             .filter(({ studentName }) => {
-              if (searchedStudent == "") {
+              if (searchedStudent === "") {
                 return studentName;
               } else if (
                 studentName
@@ -389,11 +405,11 @@ const StudentsList = () => {
             })
             .filter(({ studentLevel }) => {
               if (
-                filteredCategory == "All Students" ||
-                filteredCategory == ""
+                filteredCategory === "All Students" ||
+                filteredCategory === ""
               ) {
                 return studentLevel;
-              } else if (studentLevel == filteredCategory) {
+              } else if (studentLevel === filteredCategory) {
                 return studentLevel;
               }
             })
@@ -436,7 +452,7 @@ const StudentsList = () => {
                     {/* Icons */}
                     <div className="icons">
                       <Edit
-                        style={{ marginRight: "-60px" }}
+                        style={{ marginRight: "-30px" }}
                         onClick={editStudentDetails}
                       />
                       <Delete style={{ marginLeft: 10 }} />
