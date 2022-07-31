@@ -12,7 +12,10 @@ const Announcement = () => {
       <Navbar />
       <SearchAndAddDraft />
       <div className="announcement_container">
-        <DraftAnnouncement draftTitle={"Hi"} draftContent="This is it" />
+        <DraftAnnouncement
+          draftTitle={"Hi"}
+          draftContent="Use this as leave requests page"
+        />
         <DraftAnnouncement />
         <DraftAnnouncement />
         <DraftAnnouncement />

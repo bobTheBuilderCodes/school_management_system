@@ -55,8 +55,9 @@ const AddNewDraftModal = () => {
               mt={-2}
               mb={2}
               component="h2"
+              color={"GrayText"}
             >
-              Add New Draft
+              Add New Leave Request
             </Typography>
             <Divider />
             <TextField
@@ -66,16 +67,32 @@ const AddNewDraftModal = () => {
               variant="filled"
               fullWidth
               required
-              placeholder="Add a topic"
-              label="What's the focus?"
+              placeholder="Fullname"
+              label="Staff's name?"
               margin="normal"
             />
 
-            <Divider />
-
+            <FormControl size="small" style={{ marginTop: 5 }}>
+              <InputLabel
+                style={{ marginTop: 15 }}
+                id="demo-simple-select-label"
+              >
+                Leave
+              </InputLabel>
+              <Select
+                style={{ width: 280, marginTop: 15 }}
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={"Class"}
+                label="Class"
+                // onChange={handleChange}
+              >
+                <MenuItem value={30}>Annual</MenuItem>
+                <MenuItem value={30}>Sick</MenuItem>
+              </Select>
+            </FormControl>
             <TextareaAutosize
-              minRows={8}
-              maxRows={9}
+              placeholder="Purpose of leave"
               style={{
                 marginTop: "20px",
                 minWidth: 280,
@@ -84,12 +101,13 @@ const AddNewDraftModal = () => {
                 minHeight: 200,
                 padding: 10,
                 outline: "none",
+                resize: "none",
               }}
             />
 
             <Box mt={4}>
               <Button fullWidth variant="contained" type="submit">
-                Add Draft
+                Save Leave Request
               </Button>
             </Box>
           </form>

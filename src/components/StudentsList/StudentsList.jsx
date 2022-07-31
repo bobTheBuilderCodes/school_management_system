@@ -23,8 +23,8 @@ import {
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addStudents } from "../../Slices/studentSlice";
-import searchStudentByName from "../../Slices/studentSlice";
+import { addStudents } from "../../features/studentSlice";
+import searchStudentByName from "../../features/studentSlice";
 const style = {
   position: "absolute",
   top: "50%",

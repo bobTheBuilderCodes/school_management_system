@@ -4,7 +4,7 @@ import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 // import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 // import loggerMiddleware from "redux-logger";
 
-import studentsReducer from "../Slices/studentSlice";
+import studentsReducer from "../features/studentSlice";
 
 export default configureStore({
   reducer: {
